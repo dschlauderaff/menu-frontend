@@ -1,0 +1,26 @@
+<div class="pa4">
+  <form onsubmit={{action "signUp"}} class="measure center">
+    <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+      <legend class="f4 fw6 ph0 mh0">Sign Up</legend>
+      <div class="mt3">
+        <label class="db fw6 lh-copy f6" for="email-address">Email</label>
+        {{input class="pa2 input-reset ba bg-light-gray w-100" type="email" value=email placeholder='Enter Email'  id="email-address"}}
+      </div>
+      <div class="mv3">
+        <label class="db fw6 lh-copy f6" for="password">Password</label>
+        {{input class=" pa2 input-reset ba bg-light-gray  w-100" type="password" value=password placeholder='Enter Password'  id="password"}}
+      </div>
+      <!--<label class="pa0 ma0 lh-copy f6 pointer"><input type="checkbox"> Remember me</label>-->
+      {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+      {{/if}}
+    </fieldset>
+    <div class="">
+      <input class="b ph3 pv2 input-reset ba b--white bg-transparent grow pointer light-gray f6 dib dim" type="submit" value="Sign Up">
+    </div>
+    <div class="lh-copy mt3">
+      {{link-to 'Log in' 'login' class="f6 link dim db"}}
+      <a href="#0" class="f6 link dim db">Forgot your password?</a>
+    </div>
+  </form>
+</div>

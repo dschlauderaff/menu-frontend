@@ -1,0 +1,42 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 60em) and (max-width: 100em) {
+  .mi-container {
+    width: 80%
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .mi-container {
+    width: 50%;
+  }
+}
+
+.mi-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.mi-container::after {
+  clear: both;
+}
+
+.mi-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid;
+}
+
+.mi-app-title > .mi-subtitle {
+  font-weight: normal;
+}
+.list > li {
+  margin-bottom: 10px;
+}
