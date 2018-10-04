@@ -9,6 +9,7 @@ export default Controller.extend({
       event.preventDefault();
       let { email, password } = this;
       await this.get('session').authenticate('authenticator:credentials', email, password);
+      debugger
       await this.transitionToRoute('monsters')
     }
   }
