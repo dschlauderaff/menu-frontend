@@ -1975,7 +1975,7 @@ ember-cli-babel@6.12.0:
     ember-cli-version-checker "^2.1.0"
     semver "^5.4.1"
 
-ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.11.0, ember-cli-babel@^6.12.0, ember-cli-babel@^6.16.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0:
+ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.11.0, ember-cli-babel@^6.12.0, ember-cli-babel@^6.16.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0, ember-cli-babel@^6.9.2:
   version "6.17.2"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.17.2.tgz#f0d53d2fb95e70c15d8db84760d045f88f458f69"
   dependencies:
@@ -2256,6 +2256,14 @@ ember-cookies@^0.3.0:
     ember-cli-babel "^6.8.2"
     ember-getowner-polyfill "^1.1.0 || ^2.0.0"
 
+ember-cp-validations@^4.0.0-beta.2:
+  version "4.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/ember-cp-validations/-/ember-cp-validations-4.0.0-beta.2.tgz#7a36f2dacc77869b3b61d16b71cfdb842fe0a68c"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-require-module "^0.3.0"
+    ember-validators "^1.2.0"
+
 ember-data@~3.3.0:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-3.3.2.tgz#136cc352a25708ef210c5b01b2e4c322e29369a1"
@@ -2360,6 +2368,18 @@ ember-qunit@^3.3.2:
     ember-cli-test-loader "^2.2.0"
     qunit "^2.5.0"
 
+ember-require-module@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ember-require-module/-/ember-require-module-0.2.0.tgz#eafe436737ead4762220a9166b78364abf754274"
+  dependencies:
+    ember-cli-babel "^6.9.2"
+
+ember-require-module@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/ember-require-module/-/ember-require-module-0.3.0.tgz#65aff7908b5b846467e4526594d33cfe0c23456b"
+  dependencies:
+    ember-cli-babel "^6.9.2"
+
 ember-resolver@^4.0.0:
   version "4.5.6"
   resolved "https://registry.yarnpkg.com/ember-resolver/-/ember-resolver-4.5.6.tgz#61cecc683fbe3464d759e6d0c2bab97b3914ee4b"
@@ -2426,6 +2446,13 @@ ember-source@~3.3.0:
     inflection "^1.12.0"
     jquery "^3.3.1"
     resolve "^1.6.0"
+
+ember-validators@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ember-validators/-/ember-validators-1.2.0.tgz#b4bc9aeaf97921d80c41b7dc21acca288d1216ae"
+  dependencies:
+    ember-cli-babel "^6.9.2"
+    ember-require-module "^0.2.0"
 
 ember-welcome-page@^3.0.0:
   version "3.2.0"
