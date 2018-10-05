@@ -20,7 +20,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    // TODO change this when main route is established
+    'ember-simple-auth': {
+      routeIfAlreadyAuthenticated: 'secret'
+    },
   };
 
   if (environment === 'development') {
