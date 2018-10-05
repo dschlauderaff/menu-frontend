@@ -4,19 +4,25 @@
       <legend class="f4 fw6 ph0 mh0">Log In</legend>
       <div class="mt3">
         <label class="db fw6 lh-copy f6" for="email-address">Email</label>
-        {{input class="pa2 input-reset ba bg-light-gray w-100" type="email" value=email placeholder='Enter Email'  id="email-address"}}
+        {{input class="pa2 input-reset ba bg-light-gray w-100" type="email" value=email
+                placeholder='Enter Email'  id="email-address" focus-out=(action (mut showErrors.email) true)}}
       </div>
+      {{#if showErrors.email}}
+        <div class="mi-form-field-error">{{v-get this 'email' 'message'}}</div>
+      {{/if}}
       <div class="mv3">
         <label class="db fw6 lh-copy f6" for="password">Password</label>
-        {{input class=" pa2 input-reset ba bg-light-gray  w-100" type="password" value=password placeholder='Enter Password'  id="password"}}
+        {{input class=" pa2 input-reset ba bg-light-gray  w-100" type="password" value=password
+                placeholder='Enter Password'  id="password" focus-out=(action (mut showErrors.password) true)}}
       </div>
-      <!--<label class="pa0 ma0 lh-copy f6 pointer"><input type="checkbox"> Remember me</label>-->
-      {{#if errorMessage}}
-        <p>{{errorMessage}}</p>
+      {{#if showErrors.password}}
+        <div class="mi-form-field-error">{{v-get this 'password' 'message'}}</div>
       {{/if}}
+      <!--<label class="pa0 ma0 lh-copy f6 pointer"><input type="checkbox"> Remember me</label>-->
     </fieldset>
     <div class="">
-      <input class="b ph3 pv2 input-reset ba b--white bg-transparent grow pointer light-gray f6 dib dim" type="submit" value="Log in">
+      <input class="b ph3 pv2 input-reset ba b--white bg-transparent grow pointer light-gray f6 dib dim"
+             disabled={{v-get this 'isInvalid'}} type="submit" value="Log in">
     </div>
     <div class="lh-copy mt3">
       <span class="mr1">Don't have an account yet?</span>

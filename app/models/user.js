@@ -1,32 +1,14 @@
 import DS from 'ember-data';
-import { buildValidations, validator } from 'ember-cp-validations';
+import { buildValidations } from 'ember-cp-validations';
+import emailFieldValidation from '../validations/email-field';
+import passwordFieldValidation from '../validations/password-field';
 
 const { Model, attr } = DS;
 
 const Validations = buildValidations({
-  email: [
-    validator('presence', {
-      presence: true,
-      ignoreBlank: true,
-      message: "Email can't be empty"
-    }),
-    validator('format', {
-      type: 'email',
-      message: 'Email should be a valid email'
-    }),
-  ],
-  password: [
-    validator('presence', {
-      presence: true,
-      ignoreBlank: true,
-      message: "Password can't be empty"
-    }),
-    validator('length', {
-      min: 8,
-      message: 'Password should be at least 8 characters'
-    })
-  ]
-})
+  email: emailFieldValidation,
+  password: passwordFieldValidation
+});
 
 export default DS.Model.extend(Validations, {
   email: attr('string'),
