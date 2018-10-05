@@ -1,5 +1,13 @@
+
 import ActiveModelAdapter from 'active-model-adapter';
 
-export default ActiveModelAdapter.extend({
-  namespace: 'api'
+import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
+
+export default ActiveModelAdapter.extend(DataAdapterMixin, {
+  namespace: 'api',
+
+  authorize(xhr) {
+    let { token } = this.get('session.data.authenticated');
+    xhr.setRequestHeader('Authorization', `Bearer ${token}`);
+  }
 });

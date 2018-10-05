@@ -8,9 +8,9 @@ export default Controller.extend({
     async signIn(event) {
       event.preventDefault();
       let { email, password } = this;
+      console.log(email, password)
       await this.get('session').authenticate('authenticator:credentials', email, password);
-      debugger
-      await this.transitionToRoute('monsters')
+      await this.transitionToRoute('secret')
     }
   }
 });
